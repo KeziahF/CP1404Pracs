@@ -36,9 +36,9 @@ almost_numbers = ['0', '10', '21', '3', '-7', '88', '9']
 numbers = [int(number) for number in almost_numbers]
 print(numbers)
 
-large_numbers = [number for number in numbers if number>9]
+large_numbers = [number for number in numbers if number > 9]
 print(large_numbers)
 
 long_last_names = [name.split()[1] for name in full_names if len(name) > 11]
-long_last_names = ', '.join(map(str,long_last_names))
+long_last_names = ', '.join(map(str, long_last_names))
 print(long_last_names)
