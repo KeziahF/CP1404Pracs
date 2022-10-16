@@ -17,10 +17,8 @@ for word in text:
 
 max_word_length = max(len(word) for word in word_to_occurance.keys())
 max_occurance_length = max(len(str(number)) for number in word_to_occurance.values())
-print(max_occurance_length)
 
 word_to_occurance = dict(sorted(word_to_occurance.items()))
-print(word_to_occurance)
 
 for pair in word_to_occurance.items():
     print(f"{pair[0]:{max_word_length}} : {pair[1]:{max_occurance_length}}")

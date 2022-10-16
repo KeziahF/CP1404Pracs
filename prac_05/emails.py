@@ -1,10 +1,11 @@
 """
-CP1404 Prac
+CP1404 Practical
 Emails
 Estimate: 30 minutes
 Actual: 45 minutes
 """
 def main(user_email):
+    """collects email inputs and displays final result"""
     email_to_name = {}
     user_email = input("Email: ").lower()
     while user_email != '':
@@ -19,6 +20,8 @@ def main(user_email):
     for pair in email_to_name.items():
         print(f"{pair[1]}  ({pair[0]})")
 def extract_name(user_email, email_to_name):
+    """Extracts users name from inputted email, appends name and
+    email to dictionary and returns this dictionary to main."""
     yes_choice = ['yes', 'y']
     no_choice = ['no', 'n']
     username = user_email.split('@')
