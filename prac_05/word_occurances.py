@@ -1,15 +1,15 @@
 """
 CP1404 Practical
 Word occurances
+Count occurances of words in a string
 Estimate: 20 minutes
 Actual: 25 minutes
 
 Sorts output alphabetically
 """
-
-text = input("Text: ").lower().split(' ')
 word_to_occurance = {}
-for word in text:
+words = input("Text: ").lower().split(' ')
+for word in words:
     if word in word_to_occurance:
         word_to_occurance[word] += 1
     else:

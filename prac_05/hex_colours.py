@@ -1,6 +1,7 @@
 """
 CP1404 Practical
 Hex  Colours
+Hexadecimal colour lookup.
 """
 
 COLOUR_TO_HEX = {"absolute zero": "#0048ba", "acid green": "#b0bf1a", "aliceblue": "#f0f8ff",
@@ -10,8 +11,8 @@ COLOUR_TO_HEX = {"absolute zero": "#0048ba", "acid green": "#b0bf1a", "aliceblue
 colour = input("Enter colour name: ").lower()
 
 while colour != "":
-    if colour in COLOUR_TO_HEX.keys():
+    try:
         print(COLOUR_TO_HEX[colour])
-    else:
-        print("invalid input")
+    except KeyError:
+        print("Invalid Colour")
     colour = input("Enter colour name: ").lower()

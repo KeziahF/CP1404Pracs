@@ -1,6 +1,7 @@
 """
 CP1404/CP5632 Practical
 State Names
+State names in a dictionary
 """
 
 CODE_TO_NAME = {"QLD": "Queensland", "NSW": "New South Wales", "NT": "Northern Territory", "WA": "Western Australia",
