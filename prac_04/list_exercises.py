@@ -3,7 +3,6 @@ values = []
 menu = 'Number checker (n) or usernames (u)?: '
 usernames = ['jimbo', 'giltson98', 'derekf', 'WhatSup', 'NicolEye', 'swei45', 'BaseInterpreterInterface', 'BaseStdIn',
              'Command', 'ExecState', 'InteractiveConsole', 'InterpreterInterface', 'StartServer', 'bob']
-
 def number_checker():
     try:
         for i in range(num_numbers):

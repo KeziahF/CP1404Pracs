@@ -24,5 +24,6 @@ def random_score():
     result = user_result(score)
     print("random score = ", score, "result = ", result)
 
+
 main()
 random_score()

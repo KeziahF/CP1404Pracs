@@ -17,6 +17,7 @@ except ZeroDivisionError:
     print("Cannot divide by zero!")
 print("Finished.")
 
+
 # A value error will occur when an invalid character is entered (e.g. a letter)
 # A Zero division error will occur when a zero is entered as the denominator
 # There are a number of ways to avoid a ZeroDivisionError e.g. just output the fraction (4/0),

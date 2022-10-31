@@ -6,6 +6,7 @@ Pseudocode for temperature conversion
 MENU = """C - Convert Celsius to Fahrenheit
 F - Convert Fahrenheit to Celsius
 Q - Quit"""
+
 def celcius_to_farenheit():
     celsius = float(input("Celsius: "))
     fahrenheit = celsius * 9.0 / 5 + 32

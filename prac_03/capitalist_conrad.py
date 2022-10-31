@@ -22,6 +22,7 @@ day = 0
 
 out_file = open(OUTPUT_FILE, 'w')
 print("${:,.2f}".format(price), file=out_file)
+
 while price >= MIN_PRICE and price <= MAX_PRICE:
     day += 1
     price_change = 0

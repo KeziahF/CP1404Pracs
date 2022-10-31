@@ -31,5 +31,4 @@ def get_data():
     display_data()
     return all_data
 
-
 main()

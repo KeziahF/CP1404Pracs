@@ -53,8 +53,6 @@ def is_valid_password(password):
         if count_special == 0:
             print("special characters")
             return False
-
     return True
-
 
 main()

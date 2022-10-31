@@ -1,6 +1,5 @@
 def main():
     password = get_password()
-
     hide_password(password)
 
 

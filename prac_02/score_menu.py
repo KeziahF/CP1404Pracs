@@ -1,6 +1,7 @@
 MENU = """
 Q - Quit
-S - Score"""
+S - Score
+"""
 
 def user_result(score):
     if score < 0 or score >100:
