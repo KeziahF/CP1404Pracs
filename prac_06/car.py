@@ -1,4 +1,4 @@
-"""CP1404/CP5632 Practical - Car class example."""
+"""CP1404 Practical - Car class example."""
 
 
 class Car:
@@ -32,5 +32,5 @@ class Car:
         return distance
 
     def __str__(self):
-        detail_output = f'{self.name}, fuel={self.fuel}, odometer={self._odometer}'
-        return detail_output
+        """Return string when car information printed"""
+        return f'{self.name}, fuel={self.fuel}, odometer={self._odometer}'
