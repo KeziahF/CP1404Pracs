@@ -1,7 +1,10 @@
+"""CP1404 Prac 6 - Using Guitar class to store and present data"""
+
 from prac_06.guitar import Guitar
 
 
 def main():
+    """Takes user input and displays relevant guitar information"""
     guitars = []
 
     print("My Guitars!")

@@ -1,7 +1,10 @@
+"""CP1404 Prac 6 - Testing functionality of Guitar class"""
+
 from prac_06.guitar import Guitar
 
 
 def main():
+    """Compares expected class values with actual values"""
     name = "Gibson L-5 CES"
     year = 1922
     cost = 16035.40
@@ -17,4 +20,3 @@ def main():
 
 if __name__ == '__main__':
     main()
-
