@@ -1,5 +1,6 @@
 from prac_06.guitar import Guitar
 
+
 def main():
     name = "Gibson L-5 CES"
     year = 1922
@@ -14,12 +15,6 @@ def main():
     print(f"{other.name} is_vintage() - Expected False. Got {other.is_vintage()}")
 
 
-
-
 if __name__ == '__main__':
     main()
 
-
-
-
-main()
