@@ -1,6 +1,6 @@
-# CP1404 Prac7
+# CP1404 Practical 7 - Classes and OOP2
 
-This repo contains all code for the prac 7 tasks looking at classes adn object oriented programming. 
+This repo contains all code for the prac 7 tasks looking at classes and object oriented programming. 
 
 ## Links to important pages
 

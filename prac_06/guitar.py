@@ -6,7 +6,7 @@ VINTAGE_AGE = 50
 
 class Guitar:
     def __init__(self, name='', year=0, cost=0.0):
-        """Initialises a guitar insstance"""
+        """Initialises a guitar instance"""
         self.name = name
         self.year = year
         self.cost = cost
