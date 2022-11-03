@@ -2,8 +2,6 @@
 
 This repo contains all code for the prac 7 tasks looking at classes adn object oriented programming. 
 
-Just talking about things 
-
 ##Links to important pages
 [Link to Practical Instructions]
 (https://github.com/CP1404/Practicals)
