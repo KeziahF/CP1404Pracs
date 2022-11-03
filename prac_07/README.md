@@ -4,11 +4,9 @@ This repo contains all code for the prac 7 tasks looking at classes adn object o
 
 ## Links to important pages
 
-[Link to Practical Instructions]
-(https://github.com/CP1404/Practicals)
+[Link to Practical Instructions](https://github.com/CP1404/Practicals)
 
-[Link to Patterns page]
-(https://github.com/CP1404/Starter/wiki/Programming-Patterns)
+[Link to Patterns page](https://github.com/CP1404/Starter/wiki/Programming-Patterns)
 
 ## Lessons I have learnt about clean code so far this subject:
 - How to use variable names to portray data types (e.g. movie for an item in a list and movies for the list)
