@@ -1,5 +1,5 @@
 """
-Estimate: 1 hour
+Estimate: 2 hours
 Actual: _____
 """
 from prac_07.project import Project
@@ -30,8 +30,11 @@ def main():
             except OSError:
                 print("Invalid filename")
         elif choice == "S":
-            filename = input("File to save to: ")
-            save_projects(projects, filename)
+            try:
+                filename = input("File to save to: ")
+                save_projects(projects, filename)
+            except OSError:
+                print("Invalid filename")
         elif choice == "D":
             display_projects(projects)
         elif choice == "F":
@@ -39,8 +42,7 @@ def main():
         elif choice == "A":
             add_project(projects)
         elif choice == "U":
-            project_name = input("Project name: ")
-            update_project(projects, project_name)
+            update_project(projects)
         else:
             print("Invalid input, try again")
         print(MENU)
@@ -101,8 +103,18 @@ def add_project(projects):
         name = input("Name: ")
 
 
-def update_project(projects, project_name):
-    print()
+def update_project(projects):
+    for i, project in enumerate(projects, 1):
+        print(f"{i}: {project}")
+    project_index = int(input("Project to update: "))
+    for i, project in enumerate(projects, 1):
+        if i == project_index:
+            priority = int(input("New priority: "))
+            if priority != "":
+                project.priority = priority
+            completion = int(input("New completion percentage: "))
+            if completion != "":
+                project.completion_percentage = completion
 
 
 main()
