@@ -24,7 +24,7 @@ def main():
         name = input("Name: ")
 
     if guitars:
-        #guitars.sort()
+        # guitars.sort()
         for i, guitar in enumerate(guitars, 1):
             print(f"Guitar {i}: {guitar.name:>20} ({guitar.year}), worth ${guitar.cost}")
 
@@ -39,10 +39,6 @@ def main():
 
     else:
         print("No guitars")
-
-
-
-
 
 
 main()

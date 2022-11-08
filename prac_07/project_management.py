@@ -47,6 +47,7 @@ def main():
             print("Invalid input, try again")
         print(MENU)
         choice = input(">>> ").upper()
+    print("Thank you for using custom-built project management software.")
 
 
 def load_projects(projects, filename):
@@ -106,9 +107,10 @@ def add_project(projects):
 def update_project(projects):
     for i, project in enumerate(projects, 1):
         print(f"{i}: {project}")
-    project_index = int(input("Project to update: "))
+    project_index = int(input("Project choice: "))
     for i, project in enumerate(projects, 1):
         if i == project_index:
+            print(project)
             priority = int(input("New priority: "))
             if priority != "":
                 project.priority = priority
