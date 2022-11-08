@@ -1,6 +1,6 @@
 """CP1404 Prac 7 - Project class"""
 
-
+COMPLETE_PERCENTAGE = 100
 class Project:
     def __init__(self, name='', start_date='', priority=0, cost_estimate=0.0, completion_percentage=0):
         """Initialises a project instance"""
@@ -12,4 +12,8 @@ class Project:
 
     def __str__(self):
         """Returns string of project information"""
-        return f'{self.name}, {self.start_date}, {self.priority}, {self.cost_estimate}, {self.completion_percentage}'
+        return f'{self.name}, {self.start_date}, {self.priority}, {self.cost_estimate}, {self.completion_percentage}%'
+
+    def is_complete(self):
+        """Determines when project is completed"""
+        return self.completion_percentage

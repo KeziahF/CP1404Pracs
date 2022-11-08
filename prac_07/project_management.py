@@ -28,7 +28,7 @@ def main():
             filename = input("File to save to: ")
             save_projects(projects, filename)
         elif choice == "D":
-            display_projects()
+            display_projects(projects)
         elif choice == "F":
             filter_projects()
         elif choice == "A":
@@ -57,8 +57,15 @@ def save_projects(projects, filename):
     print("saving projects")
 
 
-def display_projects():
-    print("displaying projects")
+def display_projects(projects):
+    print("Incomplete projects: ")
+    for project in projects:
+        if str(project.is_complete()) != str(100):
+            print(project)
+    print("Completed projects: ")
+    for project in projects:
+        if str(project.is_complete()) == str(100):
+            print(project)
 
 
 def filter_projects():
