@@ -32,7 +32,7 @@ def main():
         elif choice == "F":
             filter_projects()
         elif choice == "A":
-            add_project
+            add_project(projects)
         elif choice == "U":
             update_project()
         else:
@@ -60,11 +60,11 @@ def save_projects(projects, filename):
 def display_projects(projects):
     print("Incomplete projects: ")
     for project in projects:
-        if str(project.is_complete()) != str(100):
+        if str(project.completion_percentage) != str(100):
             print(project)
     print("Completed projects: ")
     for project in projects:
-        if str(project.is_complete()) == str(100):
+        if str(project.completion_percentage) == str(100):
             print(project)
 
 
@@ -72,8 +72,17 @@ def filter_projects():
     print("filtering projects")
 
 
-def add_project():
-    print("adding projects")
+def add_project(projects):
+    print("Let's add a new project")
+    name = input("Name: ")
+    while name != "":
+        start_date = input("Start date(d/m/yyyy): ")
+        priority = int(input("Priority: "))
+        cost_estimate = float(input("Cost estimate: $"))
+        completion_percentage = int(input("Percent complete: "))
+        new_project = Project(name, start_date, priority, cost_estimate, completion_percentage)
+        projects.append(new_project)
+        name = input("Name: ")
 
 
 def update_project():

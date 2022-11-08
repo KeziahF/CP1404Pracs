@@ -14,6 +14,3 @@ class Project:
         """Returns string of project information"""
         return f'{self.name}, {self.start_date}, {self.priority}, {self.cost_estimate}, {self.completion_percentage}%'
 
-    def is_complete(self):
-        """Determines when project is completed"""
-        return self.completion_percentage
