@@ -3,6 +3,7 @@ Estimate: 1 hour
 Actual: _____
 """
 from prac_07.project import Project
+import datetime
 
 MENU = """
 Menu:
@@ -16,13 +17,16 @@ Menu:
 
 
 def main():
+    projects = []
     print(MENU)
     choice = input(">>> ").upper()
     while choice != "Q":
         if choice == "L":
-            load_projects()
+            filename = input("File to load: ")
+            projects = load_projects(projects, filename)
         elif choice == "S":
-            save_projects()
+            filename = input("File to save to: ")
+            save_projects(projects, filename)
         elif choice == "D":
             display_projects()
         elif choice == "F":
@@ -37,11 +41,19 @@ def main():
         choice = input(">>> ").upper()
 
 
-def load_projects():
-    print("Loading projects")
+def load_projects(projects, filename):
+    with open(filename, encoding="utf-8") as in_file:
+        in_file.readline()
+        for line in in_file:
+            parts = line.strip().split('\t')
+            start_date = datetime.datetime.strptime(parts[1], "%d/%m/%Y").date()
+            project = Project(parts[0], parts[1], parts[2], parts[3], parts[4])
+            projects.append(project)
+            print(project)
+    return projects
 
 
-def save_projects():
+def save_projects(projects, filename):
     print("saving projects")
 
 
