@@ -1,11 +1,13 @@
 """
+CP1404 Prac 7 - Project Management software using classes
 Estimate: 2 hours
-Actual: _____
+Actual: 2.5 hours
 """
 from prac_07.project import Project
 import datetime
 
 FILENAME = "projects.txt"
+HEADER = "Name\tStart Date\tPriority\tCost Estimate\tCompletion Percentage"
 MENU = """
 Menu:
 - (L)oad projects
@@ -18,6 +20,7 @@ Menu:
 
 
 def main():
+    """Takes user input for menu and runs relevant functions"""
     projects = []
     projects = load_projects(projects, FILENAME)
     print(MENU)
@@ -51,6 +54,7 @@ def main():
 
 
 def load_projects(projects, filename):
+    """Extracts all data from a file specified by the user"""
     with open(filename, encoding="utf-8") as in_file:
         in_file.readline()
         for line in in_file:
@@ -63,13 +67,17 @@ def load_projects(projects, filename):
 
 
 def save_projects(projects, filename):
-    """project_file = open(filename, 'w')
+    """Saves projects data into file specified by the user"""
+    project_file = open(filename, 'w')
+    print(HEADER, file=project_file)
     for project in projects:
-        project_file.write(','.join(str(val) for val in project) + '\n')
-    project_file.close()"""
+        print(f"{project}", file=project_file)
+    project_file.close()
+    print(f"Data saved to: {filename}")
 
 
 def display_projects(projects):
+    """Displays all loaded projects and labels them as complete or incomplete"""
     if projects:
         print("Incomplete projects: ")
         for project in projects:
@@ -84,6 +92,7 @@ def display_projects(projects):
 
 
 def filter_projects(projects):
+    """Displays all projects that began after user selected date"""
     date = input("Date: ")
     date = datetime.datetime.strptime(date, "%d/%m/%Y").date()
     for project in projects:
@@ -92,6 +101,7 @@ def filter_projects(projects):
 
 
 def add_project(projects):
+    """Takes user input for project details and appends them to proejcts"""
     print("Let's add a new project")
     name = input("Name: ")
     while name != "":
@@ -105,6 +115,7 @@ def add_project(projects):
 
 
 def update_project(projects):
+    """Allows user to change completion percent adn priority of existing project"""
     for i, project in enumerate(projects, 1):
         print(f"{i}: {project}")
     project_index = int(input("Project choice: "))

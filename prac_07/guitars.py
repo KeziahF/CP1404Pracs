@@ -28,11 +28,11 @@ def main():
         for i, guitar in enumerate(guitars, 1):
             print(f"Guitar {i}: {guitar.name:>20} ({guitar.year}), worth ${guitar.cost}")
 
-        number_of_guitars = 0
         guitar_file = open(FILEPATH, 'w')
-        for i, guitar in enumerate(guitars, 1):
+        number_of_guitars = 0
+        for guitar in guitars:
             number_of_guitars += 1
-            guitar_file.write(str(guitar.name for val in guitar) + '\n')
+            print(f"{guitar.name},{guitar.year},{guitar.cost}", file=guitar_file)
         guitar_file.close()
         print(f"{number_of_guitars} guitars saved to guitars.csv")
         print("Have a nice day :)")
