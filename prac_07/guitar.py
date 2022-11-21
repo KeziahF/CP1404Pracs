@@ -6,9 +6,7 @@ VINTAGE_AGE = 50
 
 class Guitar:
     def __init__(self, name='', year=0, cost=0.0):
-    
-        """Initialises a guitar insstance"""
-
+        """Initialises a guitar instance"""
         self.name = name
         self.year = year
         self.cost = cost
@@ -24,3 +22,7 @@ class Guitar:
     def is_vintage(self):
         """Compares guitar age to VINTAGE AGE and returns True if it is vintage"""
         return self.get_age() >= VINTAGE_AGE
+
+    def __lt__(self, other):
+        """Less than, used for sorting Guitars - by year released."""
+        return int(self.year) < int(other.year)
