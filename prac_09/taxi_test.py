@@ -1,7 +1,8 @@
 from prac_09.taxi import Taxi
 
+
 def main():
-    taxi = Taxi("Prius 1", 100, 1.23)
+    taxi = Taxi("Prius 1", 100)
     taxi.drive(40)
     print(taxi)
     fare = taxi.get_fare()
