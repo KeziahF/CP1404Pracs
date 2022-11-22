@@ -1,3 +1,8 @@
+"""
+CP1404 Practical
+taxi simulator using silver taxi and taxi classes
+"""
+
 from prac_09.silver_service_taxi import SilverServiceTaxi
 from prac_09.taxi import Taxi
 
@@ -8,6 +13,7 @@ q)uit, c)hoose taxi, d)rive
 
 
 def main():
+    """Takes user input using menu and provides relevant ouput"""
     taxis = [Taxi("Prius", 100), SilverServiceTaxi("Limo", 100, 2), SilverServiceTaxi("Hummer", 200, 4)]
     current_taxi = None
     bill_to_date = 0
@@ -47,6 +53,7 @@ def main():
     display_taxis(taxis)
 
 def display_taxis(taxis):
+    """Prints all taxis"""
     for i, taxi in enumerate(taxis):
         print(i, "-", taxi)
 
