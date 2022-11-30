@@ -9,7 +9,7 @@ from car import Car
 
 def repeat_string(s, n):
     """Repeat string s, n times, with spaces in between."""
-    return " ".join([s]*n)
+    return " ".join([s] * n)
 
 
 def is_long_word(word, length=5):
@@ -39,7 +39,7 @@ def run_tests():
     # used to see if Car's init method sets the odometer correctly
     # this should pass (no output)
     test_car = Car()
-    assert test_car._odometer == 0 #Car does not set odometer correctly
+    assert test_car._odometer == 0  # Car does not set odometer correctly
 
     # TODO: 2. write assert statements to show if Car sets the fuel correctly
     # Note that Car's __init__ function sets the fuel in one of two ways:
@@ -64,11 +64,13 @@ doctest.testmod()
 is_long_word("supercalifrag")
 is_long_word("not")
 
+
 def phrase_to_sentence(phrase):
     sentence = phrase.capitalize()
     if sentence[-1] != '.':
         sentence += '.'
     return sentence
+
 
 # TODO: 5. Write and test a function to format a phrase as a sentence,
 # starting with a capital and ending with a single full stop.
